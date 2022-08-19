@@ -16,6 +16,12 @@ body{
     text-align: center;
     border-radius: 0rem 0rem 0rem 6rem;
     padding-bottom: 5rem;
+    border: 1px solid hsl(353, 100%, 62%);
+    max-width: 100%;
+    min-height: 30vw;
+    font-weight: bold;
+    
+    
 }
 .navs{
     display: flex;
@@ -46,22 +52,25 @@ body{
 
 }
 .bottom-nav a{
-   margin: 5px;
+   margin: 1rem;
    border: 1px solid white;
    border-radius: 10px;
-   padding: 5px;
+   padding: 0.5rem;
    color: hsl(13, 100%, 72%);
    background-color: white;
+   max-width: 100%;
 }
 .bottom-nav span a{
-    color: black;
+    color: white;
     border: 1px solid white;
     background-color: hsl(13, 100%, 72%);
-    padding: 5px;
+    padding: 0.5rem;
+    max-width: 100%;
 }
 .header h1{
-    padding-top: 1rem;
+    padding-top: 3rem;
     color:white;
+    font-size: 3rem;
 }
 .header p{
     padding: 1rem;
@@ -69,6 +78,7 @@ body{
 }
 .bottom-nav{
     padding-bottom: 1rem;
+    margin-top: 1rem;
 }
 .content-1{
     color: hsl(237, 23%, 32%) ;
@@ -97,34 +107,50 @@ body{
     border: 1px solid  hsl(237, 23%, 32%);
     border-radius: 0rem 6rem 0rem 6rem;
     font-size: 16px;
-    height: 80vh;
-    margin-bottom: 5rem;
+    height: 30vw;
+    margin-bottom:10rem ;
+    
+    
     
 
 
 }
+.content2-img{
+    max-width: 100%;
+
+    
+}
+
+
+
+
 .content-2 h3{
     padding: 1rem;
+    color: hsl(0, 0%, 100%) ;
 }
 .content-20{
-    padding-top: 8rem;
+    padding-top: 2rem;
+    color: hsl(0, 0%, 100%);
 }
 .content-3{
     display: flex;
     justify-content: space-between;
     color: hsl(237, 23%, 32%);
     font-size: 16px;
-    margin-right:8rem;
+    padding-right: 5rem;
     padding-top: 2rem;
+    
+    
+}
+.content-3 img{
+    max-width: 100%;
 }
 
 .content-3 h3{
     padding: 1rem;
 
 }
-.content-3 p{
-    padding-bottom: 1rem;
-}
+
 .content-30{
     padding-top: 8rem;
 }
@@ -139,6 +165,10 @@ body{
     margin-top: 1rem;
     border: 1px solid hsl(240, 10%, 16%);
     border-radius: 8rem 0 0 0;
+}
+.footer p{
+  font-size: 1.5rem;
+  font-weight: bold;
 }
 .footer ul li{
     list-style-type: none;
@@ -160,22 +190,59 @@ body{
 .bottom-nav span a:hover{
     background-color: black;
     color: white;
+    border-color: black;
 }
 .footer ul li:hover{
     color: white;
 }
 .img1, .img2, .burger-icon{
     display: none;
+    width: 100%;
 }
 .attribution{
     text-align: center;
     color:hsl(240, 2%, 79%) ;
+}
+.content-1-mobile, .content-20-Mobile , .content-30-Mobile{
+    display: none;
 }
 
 @media  screen and (max-width:600px) {
     body{
         text-align: center;
         
+    }
+
+    .header{
+        min-height: 35vw;
+        width: 100%;
+        font-weight: bold;
+    }
+    .header h1{
+        font-size: 1rem;
+        padding-top: 0.5rem;
+        
+    }
+    
+    .bottom-nav{
+        margin-top: 0;
+        max-width: 100%;
+        padding-top: 1rem;
+        font-family:sans-serif;
+    }
+    .bottom-nav s span{
+        background-color: inherit;
+        color: white;
+        border-color: white;
+    }
+    .content-1 .content-1-mobile,.content-2 .content-20-Mobile ,.content-3 .content-30-Mobile{
+        display: block;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        font-size: 1rem;
+    }  
+    
+    .content-1 p, .content-20 p, .content-30 p{
+        display: none;
     }
     
     .content-1{
@@ -222,7 +289,9 @@ body{
     flex-direction: column;
     color:white;
     height: 100vh;
-   }
+    margin-bottom: 0rem;
+}
+   
    .content-20{
     padding-top: 0;
     padding-bottom: 10rem;
@@ -232,14 +301,13 @@ body{
     text-transform: capitalize;
     font-family: sans-serif;
    }
-   .content-20 p{
-    font-weight: lighter;
-    text-transform: lowercase;
-    padding-top: 1rem;
+   .content-20-Mobile{
+    color: hsl(240, 2%, 79%);
    }
+   
    .content-2 img{
     max-width: 100%;
-    margin-bottom: 3rem;
+    margin-bottom: 4rem;
    }
    .content-3{
     display: flex;
@@ -247,6 +315,7 @@ body{
     margin-right: 0;
     padding-top:0;
     padding-bottom: 2rem;
+    padding-right: 0;
    }
    .content-30{
     
@@ -264,9 +333,10 @@ body{
         flex-direction: column;
         
     }
-    .footer h4{
+    .footer p{
         font-size: 20px;
-        padding-top: 1rem;
+        padding-top: 1.5rem;
+        font-weight: bold;
     }
     .footer ul li{
         font-size: 16px;
